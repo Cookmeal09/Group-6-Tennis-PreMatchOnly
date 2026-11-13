@@ -1,0 +1,23 @@
+column_name,column_type,min,max,approx_unique,null_percentage
+match_id,BIGINT,9261,59317,49040,0.0
+date,TIMESTAMP,2008-01-07 00:00:00,2026-05-25 00:00:00,968,0.0
+year,INTEGER,2008,2026,21,0.0
+surface,VARCHAR,Carpet,Hard,3,0.0
+level,VARCHAR,A,O,6,0.0
+best_of_5,BIGINT,0,1,2,0.0
+y,BIGINT,0,1,2,0.0
+rank_diff,DOUBLE,-2125.0,2094.0,2313,0.0
+age_diff,DOUBLE,-21.6,25.9,967,0.01
+height_diff,DOUBLE,-188.0,180.0,85,2.08
+elo_diff,DOUBLE,-965.8185362469278,983.4212037305022,40817,0.0
+surface_elo_diff,DOUBLE,-815.9423398770173,787.0433371546492,56968,0.0
+played_diff,BIGINT,-1321,1343,1970,0.0
+form10_diff,DOUBLE,-1.0,1.0,381,0.0
+h2h_wins_diff,BIGINT,-20,18,38,0.0
+log_points_diff,DOUBLE,-6.802765065124506,7.970913086665844,42352,0.0
+inmatch_aces_diff,DOUBLE,-65.0,57.0,86,5.62
+inmatch_double_faults_diff,DOUBLE,-24.0,19.0,44,5.62
+inmatch_first_serve_won_diff,DOUBLE,-38.0,37.0,73,5.62
+inmatch_second_serve_won_diff,DOUBLE,-31.0,30.0,56,5.62
+inmatch_break_points_faced_diff,DOUBLE,-27.0,26.0,51,5.62
+inmatch_break_points_saved_diff,DOUBLE,-24.0,24.0,49,5.62

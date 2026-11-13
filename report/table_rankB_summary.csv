@@ -1,0 +1,6 @@
+item,detail,value
+best method on test,LightGBM tuned,0.7253715502785142
+runner-up,Blend of four families,0.725028998898827
+gap between them has an interval that excludes zero,False,0.00038372016767821316
+tuning changed LightGBM by,ROC_AUC,0.001262061065782416
+explanation agreement between seeds (rank correlation),LightGBM,0.8945054945054944

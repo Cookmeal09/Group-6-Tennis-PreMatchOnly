@@ -1,0 +1,6 @@
+,0
+best_model,Small MLP
+ROC_AUC,0.7254652647344804
+PR_AUC,0.7202105348243897
+spread,0.04973875021892604
+verdict,"WEAK: the signal is weak, pivot the target or the features (see the options above) and report this result honestly"

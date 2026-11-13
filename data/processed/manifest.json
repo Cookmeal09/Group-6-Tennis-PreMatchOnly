@@ -1,0 +1,7 @@
+{
+  "file": "data/processed/tennis.parquet",
+  "rows": 50057,
+  "columns": 22,
+  "feat_rows": 50057,
+  "md5": "068aa8ede0d4a39b58b9de3328098313"
+}

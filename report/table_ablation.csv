@@ -1,0 +1,6 @@
+feature_set,accuracy,ROC_AUC
+All pre-match features,65.9%,0.724
+without Elo and surface Elo,65.2%,0.7155
+without rank and log points,64.8%,0.7166
+without form and head-to-head,65.4%,0.7231
+without age and height,65.3%,0.7187

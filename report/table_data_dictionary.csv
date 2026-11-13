@@ -1,0 +1,23 @@
+,dtype,missing_pct,unique,example
+match_id,int64,0.0,50057,9261
+date,datetime64[us],0.0,847,2008-01-07 00:00:00
+year,int32,0.0,19,2008
+surface,str,0.0,4,Hard
+level,str,0.0,6,A
+best_of_5,int64,0.0,2,0
+y,int64,0.0,2,0
+rank_diff,float64,0.0,1800,55.0
+age_diff,float64,0.01,997,4.0
+height_diff,float64,2.08,78,5.0
+elo_diff,float64,0.0,50003,-496.480517389939
+surface_elo_diff,float64,0.0,49870,-342.90614355269327
+played_diff,int64,0.0,2064,-163
+form10_diff,float64,0.0,346,-0.6
+h2h_wins_diff,int64,0.0,39,0
+log_points_diff,float64,0.0,48505,-1.517802564197389
+inmatch_aces_diff,float64,5.62,86,-2.0
+inmatch_double_faults_diff,float64,5.62,39,2.0
+inmatch_first_serve_won_diff,float64,5.62,71,-10.0
+inmatch_second_serve_won_diff,float64,5.62,58,-3.0
+inmatch_break_points_faced_diff,float64,5.62,53,8.0
+inmatch_break_points_saved_diff,float64,5.62,46,4.0
