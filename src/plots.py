@@ -217,7 +217,7 @@ def plot_rq3_leakage(output_path='report/fig_rq3_leakage.png'):
 def plot_rq3_segments(output_path='report/fig_rq3_segments.png'):
     """
     Figure 5 from Proposal:
-    Grouped bar chart comparing Best Model vs Rating Rule (Elo) across tournament levels.
+    Grouped bar chart comparing Best Model vs Higher-Elo rule across tournament levels.
     Instantly shows in 5s: Both model and rule surge to ~73% in Grand Slams (best-of-5 sets).
     """
     csv_path = 'report/table_rq3_segments.csv'
@@ -244,7 +244,7 @@ def plot_rq3_segments(output_path='report/fig_rq3_segments.png'):
     ax.set_facecolor('white')
 
     bars1 = ax.bar(x - width/2, model_acc, width, label='Best model', color=PRIMARY_TEAL, zorder=3)
-    bars2 = ax.bar(x + width/2, rule_acc, width, label='Rating rule', color=ACCENT_AMBER, zorder=3)
+    bars2 = ax.bar(x + width/2, rule_acc, width, label='Higher-Elo rule', color=ACCENT_AMBER, zorder=3)
 
     for bar in bars1:
         v = bar.get_height()
@@ -354,7 +354,7 @@ def plot_rq3_confidence(output_path='report/fig_rq3_confidence.png'):
 
 def plot_rq3_by_year(output_path='report/fig_rq3_by_year.png'):
     """
-    Comparison of Best Model vs Rating Rule vs Better Ranked across 2024, 2025, 2026.
+    Comparison of Best Model vs Higher-Elo rule vs Better Ranked across 2024, 2025, 2026.
     """
     csv_path = 'report/table_rq3_by_year.csv'
     if not os.path.exists(csv_path):
@@ -375,7 +375,7 @@ def plot_rq3_by_year(output_path='report/fig_rq3_by_year.png'):
     ax.set_facecolor('white')
 
     b1 = ax.bar(x - width, m_acc, width, label='Best Model', color=PRIMARY_TEAL, zorder=3)
-    b2 = ax.bar(x, r_acc, width, label='Rating Rule (Elo)', color=ACCENT_AMBER, zorder=3)
+    b2 = ax.bar(x, r_acc, width, label='Higher-Elo rule', color=ACCENT_AMBER, zorder=3)
     b3 = ax.bar(x + width, b_acc, width, label='Better-Ranked Rule', color='#8ECAE6', zorder=3)
 
     for bars in [b1, b2, b3]:
