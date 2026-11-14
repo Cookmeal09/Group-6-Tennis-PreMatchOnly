@@ -168,7 +168,7 @@ def plot_rq3_leakage(output_path='report/fig_rq3_leakage.png'):
         'Logistic\n(pre-match)',
         'LightGBM\n(pre-match)',
         'MLP\n(pre-match)',
-        'With In-Match\nStats (Leaked!)'
+        'With In-Match\nStats'
     ]
     values = [better_rank_acc, two_ratings_acc, log_pre_acc, lgb_pre_acc, mlp_pre_acc, leaked_acc]
 
@@ -195,7 +195,7 @@ def plot_rq3_leakage(output_path='report/fig_rq3_leakage.png'):
             bbox=dict(boxstyle='round,pad=0.3', facecolor='#F0F4F8', edgecolor='#D3D3D3', alpha=0.9))
 
     ax.annotate(
-        '+26.0% Leaked Gain',
+        '+25.9% Leaked Gain',
         xy=(5.0, 91.9), xytext=(3.4, 82),
         arrowprops=dict(arrowstyle="->,head_width=0.4,head_length=0.5",
                         lw=2.0, color=ACCENT_CORAL, shrinkB=6),
@@ -455,7 +455,7 @@ def plot_rankB_importance(output_path='report/fig_rankB_importance.png'):
 
     df = pd.read_csv(csv_path)
     feat_col = df.columns[0]
-    top_df = df.head(7).iloc[::-1]
+    top_df = df.head(8).iloc[::-1]
 
     feats = top_df[feat_col].values
     means = top_df['mean'].values
@@ -466,6 +466,7 @@ def plot_rankB_importance(output_path='report/fig_rankB_importance.png'):
     fig.patch.set_facecolor('white')
     ax.set_facecolor('white')
 
+    # Highlights the top 2 features with ACCENT_AMBER, others use PRIMARY_TEAL
     colors = [ACCENT_AMBER if i >= len(feats) - 2 else PRIMARY_TEAL for i in range(len(feats))]
     bars = ax.barh(y_pos, means, color=colors, height=0.55, edgecolor='none', zorder=3)
 
@@ -478,13 +479,21 @@ def plot_rankB_importance(output_path='report/fig_rankB_importance.png'):
             fontweight='bold', fontsize=8.5, color=DARK_NAVY
         )
 
+    # Add a little extra headroom on the x-axis so the text labels don't get clipped
+    ax.set_xlim(0, means.max() * 1.15)
+
     ax.set_yticks(y_pos)
     ax.set_yticklabels(feats, fontsize=9, fontweight='semibold')
     ax.set_xlabel('Mean Permutation Importance (Drop in ROC-AUC)', fontsize=9.5, fontweight='semibold', color=DARK_NAVY)
 
     ax.spines[['top', 'right']].set_visible(False)
     ax.grid(axis='x', linestyle=':', alpha=0.35, zorder=1)
+    
     fig.tight_layout()
+    
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
     fig.savefig(output_path, dpi=300)
     plt.close(fig)
     print(f'Saved {output_path}')
